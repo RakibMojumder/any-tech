@@ -1,5 +1,3 @@
-"use client";
-
 import FeatureImage from "./feature-image";
 
 const FeatureSection = () => {

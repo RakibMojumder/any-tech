@@ -3,11 +3,21 @@
 @tailwind utilities;
 
 
-#home-hero__content__container {
+#hero_container {
   background: radial-gradient(59.82% 121.73% at -9.66% 130.31%, #00e9ea 0%, #1f80f0 52.08%, #005bc4 100%);
 }
 
-.bg-clip-hero-container {
+#contact_us_container {
+  background: radial-gradient(24.45% 88.58% at 23.57% 2%, #00e9ea 0%, #1f80f0 52.08%, #005bc4 100%);
+}
+
+.contact-us-bg-clip {
+  clip-path: polygon(0 0, 100% 49%, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0 0, 100% 49%, 100% 100%, 0% 100%);
+  ;
+}
+
+.hero-bg-clip {
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
 }

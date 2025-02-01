@@ -1,22 +1,10 @@
-import { motion, useTransform, useMotionValue } from "motion/react";
-import { useEffect } from "react";
+"use client";
+
+import { motion, useTransform } from "motion/react";
+import useMouseValue from "@/hooks/useMouseValue";
 
 const HeroBackgroundImage = () => {
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-
-  useEffect(() => {
-    const handleMouseMove = (event: MouseEvent) => {
-      const x = event.clientX - window.innerWidth / 2;
-      const y = event.clientY - window.innerHeight / 2;
-      mouseX.set(x);
-      mouseY.set(y);
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, [mouseX, mouseY]);
+  const { mouseX, mouseY } = useMouseValue();
 
   const backgroundX = useTransform(mouseX, (x) => x * 0.03);
   const backgroundY = useTransform(mouseY, (y) => y * 0.03);
