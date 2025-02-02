@@ -12,8 +12,8 @@
 }
 
 .contact-us-bg-clip {
-  clip-path: polygon(0 0, 100% 49%, 100% 100%, 0% 100%);
-  -webkit-clip-path: polygon(0 0, 100% 49%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 40%, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0 0, 100% 40%, 100% 100%, 0% 100%);
   ;
 }
 
@@ -39,8 +39,32 @@
   box-sizing: drop-shadow(0px -5px 28px rgba(22, 67, 119, .37))
 }
 
+
+/* Swiper Pagination */
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  @apply !bottom-2 !left-1/2 !-translate-x-1/2;
+}
+
+.swiper-pagination-bullet {
+  @apply bg-blue-500 !size-3 rounded-full opacity-75 transition-all ease-in-out;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-blue-700 opacity-100;
+}
+
+.swiper-pagination {
+  @apply flex justify-center items-center absolute !-bottom-8 left-1/2 transform -translate-x-1/2 !space-x-3;
+}
+
+/* Swiper Pagination */
+
 @layer utilities {
   .container {
     @apply max-w-[480px] md:max-w-[1200px] w-full mx-auto px-8 lg:px-4
+  }
+
+  .technology-item {
+    filter: drop-shadow(rgba(207, 233, 247, 0.47) 0px 16px 21px);
   }
 }
